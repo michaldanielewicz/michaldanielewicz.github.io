@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Uni-One</title>
+		<title>Uni-Air</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -10,34 +10,74 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
 			<header id="header">
 				<a href="index.html" class="title">Home</a>
 			</header>
 
-		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Main -->
 					<section id="main" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Uni-Air</h1>
-							<p>My job in this project was to develop a brand new software for a new product line. Below you can find some screens I've created.</p>
+							<h1 class="major">Uni-Air (2018)</h1>
+							<h2>What is this all about?</h2>
+							<p>The company where I worked was involved in the production of varnishing machines. However, customers had problems with maintaining appropriate humidity in their production plants. The air humidity can drop up to 15% in the winter season, and in order to apply the varnish precisely, a humidity of 45% is necessary. Therefore, together with a team of designers, we created a humidifying system for industrial halls with a total area of <b>6000 square meters</b>.
+								I took care of the design of the control cabinet, selection of electrical parts, creation of the control program and user interface.
+								<br />
+								The system consisted of:
+								<ol>
+									<li>Four water pumps with a total power of 12 kW. </li>
+									<li>Twelve moisture meters with integrated RS485 interface.</li>
+									<li>Several dozen water sprays placed on the ceiling.</li>
+									<li>Hydraulic equipment (distributors, hoses).</li>
+									<li>Control cabinet with electrical equipment.</li>
+								</ol>
+							<hr />
+
+							<h2>User Interface</h2>
+							<p>Below are a few screens that I created. I tried to be as simple as possible. The display was mounted on an electrical cabinet and was designed to be transparent for everyone.</p>
 							<div class="row gtr-uniform">
 											<div class="col-4"><span class="image fit"><img src="images/uni_air1.png" alt="" /></span></div>
 											<div class="col-4"><span class="image fit"><img src="images/uni_air2.png" alt="" /></span></div>
 											<div class="col-4"><span class="image fit"><img src="images/uni_air3.png" alt="" /></span></div>
 											<div class="col-4"><span class="image fit"><img src="images/uni_air4.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/uni_air5.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/uni_air6.png" alt="" /></span></div>
 							</div>
-							<p>The process looked like this:</p>
-							<div class="col-4"><span class="image fit"><img src="images/uni_air5.jpg" alt="" /></span></div>
-							<p>You can take a look at the chunk of code <a href="https://pastebin.pl/view/e8f0efdd">here</a> and <a href="https://pastebin.pl/view/d6012475">here</a>.</p>
-						</div>
+							<hr />
+
+							<h2>Software</h2>
+							<p>
+								The program code was written in Structured Language (language based on <b>Pascal</b>).<br />
+
+								The system is divided into configurable zones. There is one humidity meter in each zone.
+								From humidity, the pumps are switched on or off to replenish the humidity in the room. Each zone is switched on independently of each other. <br />
+								One of the challenges was to write the optimal PID control for pump operation. So that the pressure in the hydraulic lines is adequate to ensure 
+								spraying in the form of fog. However, the program had to watch out for the upper pressure limit which was 90 bar. At the same time, it was necessary to change the operating parameters of the pump quickly enough to make it work efficiently.<br /><br />
+								Each zone that is switched on works in a configurable interruption and operation zone.
+								<br />
+								<br />
+								
+								
+								You can take a look at the chunk of code <a href="https://pastebin.pl/view/e8f0efdd">here</a> and <a href="https://pastebin.pl/view/d6012475">here</a>.
+							</p>
+							<hr />
+
+							<h2>So what have I learned?</h2>
+							<p>Actually it was my first big commercial project. Eventually I was able to use my knowledge from the university and do something that was useful for the client. So this is the few things I've learned during this project:</p>
+							<ul class="alt">
+								<li>Making clear User Interface.</li>
+								<li>I learned how to control motor pumps to optimize their performance.</li>
+								<li>I learned how to create and manage code in ST and the importance of keeping it clear.</li>
+								<li>I learned how to communicate with the user and solve the troubles.</li>
+								<li>I learned how to cooperate with people in the team.</li>
+								<li>I learned how to manage team of electricians and hydraulics.</li>
+							</ul>
+							
 					</section>
+
 
 			</div>
 
-		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
@@ -46,7 +86,6 @@
 				</div>
 			</footer>
 
-		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
