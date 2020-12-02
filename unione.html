@@ -48,33 +48,57 @@
 							<hr />
 
 							<h2>Control logic</h2>
+							<h3>Image processing</h3>
 							<p>In order for the objects to be painted correctly, it is necessary to scan the details before they enter the machine.
 								It was necessary to create new software to process the signal from the laser scanner. The previous one was not 
 								efficient because we received too low image resolution and the driver misinterpreted the surfaces to be painted. 
+								<br />
+								So I created new software based on linear filters and Gaussian blur. The code has been implemented in Structured 
+								Language, a language widely used in industrial automation. It is based on Pascal. 
 							</p>
 							<p>
-								So I created new software based on linear filters and Gauss blur. The code has been implemented in Structured Language, a language widely used in industrial automation. It is based on Pascal. Below you can see the results of image processing.
+								Below you can see the results of image processing.
 							</p>
-							
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img src="images/scan_1/1.png" alt="Uni-One" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/scan_1/2.png" alt="Uni-One" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/scan_1/3.png" alt="Uni-One" /></span></div>
+							</div><br />
+							<p>And the second case: </p>
+							<div class="row gtr-uniform">
+								<div class="col-4"><span class="image fit"><img src="images/scan_2/1.png" alt="Uni-One" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/scan_2/2.png" alt="Uni-One" /></span></div>
+								<div class="col-4"><span class="image fit"><img src="images/scan_2/3.png" alt="Uni-One" /></span></div>
+							</div>
+							<br />
+							<p>
+								However, as you can see the images are further distorted. Despite changes in filter parameters, 
+								it was not possible to achieve a satisfactory effect. After changing the scanner to beam resolution 
+								twice as high, each element in nine out of ten cases could be recognized.
+							</p>
 
+							<h3>Video</h3>
 								<p>Here you can see the previous version of machine in an action:</p>
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/Ti2lCA69hK0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 							<hr />
 							
 							<h2>So what have I learned?</h2>
-							<p>This was pretty big project, with many months of development. The most important thing I've learned is that the 
-								software and interface design process is an incremental activity and it's not worth getting too attached to 
-								previous versions. It is also important to consult with the whole team often so that the work we do is not 
-								unnecessary. 
-							</p>
-							<p>
-								Besides, I learned to improve the code and make it more readable. It was necessary to work with colleagues to be 
-								effective. I spent a lot of time on making every variable and function name appropriate.
-							</p>
+							<ul class="alt">
+								<li>This was pretty big project, with many months of development. The most important thing I've learned is that the 
+									software and interface design process is an incremental activity and it's not worth getting too attached to 
+									previous versions. It is also important to consult with the whole team often so that the work we do is not 
+									unnecessary. </li>
+								<li>Besides, I learned to improve the code and make it more readable. It was necessary to work with colleagues to be 
+									effective. I spent a lot of time on making every variable and function name appropriate.</li>
+								<li>I used the resources used in my studies to finally use image processing algorithms in practice. Thanks to the 
+									fact that the code has never been written in this language before, I was able to write my own version of the 
+									implementation, step by step, of which I am very proud.</li>
+							</ul>
 							<hr />
 
 							<h2>More details about machine</h2>
 							<p><a href="http://unison.com.pl/automaty-oscylacyjne-uni-one/">Here</a> you can find more technical details about machine.</p>
+
 						</div>
 					</section>
 			</div>
